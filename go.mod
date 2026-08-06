@@ -1,0 +1,29 @@
+module github.com/scaleway/secrets-store-csi-driver-provider-scw
+
+go 1.26.3
+
+tool go.uber.org/mock/mockgen
+
+require (
+	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.3
+	github.com/scaleway/scaleway-sdk-go v1.0.0-beta.37
+	github.com/stretchr/testify v1.11.1
+	go.uber.org/mock v0.6.0
+	google.golang.org/grpc v1.83.0
+	gopkg.in/yaml.v3 v3.0.1
+	sigs.k8s.io/secrets-store-csi-driver v1.6.0
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	golang.org/x/mod v0.37.0 // indirect
+	golang.org/x/net v0.56.0 // indirect
+	golang.org/x/sync v0.22.0 // indirect
+	golang.org/x/sys v0.46.0 // indirect
+	golang.org/x/text v0.40.0 // indirect
+	golang.org/x/tools v0.47.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260526163538-3dc84a4a5aaa // indirect
+	google.golang.org/protobuf v1.36.12-0.20260120151049-f2248ac996af // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
+)
