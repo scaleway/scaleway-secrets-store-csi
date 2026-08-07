@@ -1,0 +1,37 @@
+name: pull-request
+on:
+  - pull_request
+jobs:
+  unit-test:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 1
+    - name: Install Go
+      uses: actions/setup-go@v6
+      with:
+        go-version-file: go.mod
+    - name: Run unit tests
+      run: make test
+  build-test:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest]
+        arch: [386, amd64, arm, arm64]
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 1
+    - name: Install Go
+      uses: actions/setup-go@v6
+      with:
+        go-version-file: go.mod
+    - name: Building binary
+      run: GOARCH=${{ matrix.arch }} make build
