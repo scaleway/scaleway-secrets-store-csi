@@ -49,6 +49,10 @@ stringData:
   secretKey: "my-secret-key"
 ```
 
+> **Note**
+>
+> The provider does not support authentication with a Kubernetes Service Account yet.
+
 ### SecretProviderClass
 
 Create a SecretProviderClass to define which secrets to mount:
