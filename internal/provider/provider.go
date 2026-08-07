@@ -8,7 +8,7 @@ import (
 	"strconv"
 
 	secret "github.com/scaleway/scaleway-sdk-go/api/secret/v1beta1"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/config"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/config"
 	pb "sigs.k8s.io/secrets-store-csi-driver/provider/v1alpha1"
 )
 

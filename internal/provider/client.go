@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/scaleway/scaleway-sdk-go/scw"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/config"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/config"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/version"
 )
 
 const (

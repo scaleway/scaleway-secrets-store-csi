@@ -3,6 +3,10 @@ TARGETARCH ?= amd64
 BUILD_VERSION ?= latest
 DOCKER_IMAGE ?= scaleway/scaleway-secrets-store-csi
 
+.PHONY: build
+build:
+	@go build -o scaleway-secrets-store-csi -ldflags "-X github.com/scaleway/scaleway-secrets-store-csi/internal/version.BuildVersion=$(BUILD_VERSION)" ./cmd/server
+
 .PHONY: test
 test:
 	@go test ./...

@@ -3,7 +3,7 @@ package version_test
 import (
 	"testing"
 
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/version"
 	"github.com/stretchr/testify/assert"
 )
 

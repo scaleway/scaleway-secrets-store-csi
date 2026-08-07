@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/config"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/provider"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/config"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/provider"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/version"
 	pb "sigs.k8s.io/secrets-store-csi-driver/provider/v1alpha1"
 )
 

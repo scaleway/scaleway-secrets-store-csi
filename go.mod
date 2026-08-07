@@ -1,4 +1,4 @@
-module github.com/scaleway/secrets-store-csi-driver-provider-scw
+module github.com/scaleway/scaleway-secrets-store-csi
 
 go 1.26.3
 

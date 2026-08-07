@@ -3,7 +3,7 @@ package config_test
 import (
 	"testing"
 
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/config"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

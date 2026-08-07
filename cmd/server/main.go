@@ -15,9 +15,9 @@ import (
 
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/logging"
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/recovery"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/provider"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/server"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/provider"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/server"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/version"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

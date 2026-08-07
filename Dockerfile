@@ -20,9 +20,9 @@ RUN --mount=type=cache,target=/go/pkg/mod/ \
     --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=bind,target=. \
     GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -trimpath \
-    -ldflags="-X github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version.BuildDate=${BUILD_DATE} \
-              -X github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version.BuildVersion=${BUILD_VERSION} \
-              -X github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/version.GoVersion=${GOVERSION}" \
+    -ldflags="-X github.com/scaleway/scaleway-secrets-store-csi/internal/version.BuildDate=${BUILD_DATE} \
+              -X github.com/scaleway/scaleway-secrets-store-csi/internal/version.BuildVersion=${BUILD_VERSION} \
+              -X github.com/scaleway/scaleway-secrets-store-csi/internal/version.GoVersion=${GOVERSION}" \
     -o /server ./cmd/server
 
 #################### RUNTIME ###############################

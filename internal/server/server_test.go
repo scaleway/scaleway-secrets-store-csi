@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/provider"
-	"github.com/scaleway/secrets-store-csi-driver-provider-scw/internal/server"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/provider"
+	"github.com/scaleway/scaleway-secrets-store-csi/internal/server"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
