@@ -29,6 +29,8 @@ helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets
 helm install csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver --namespace kube-system
 
 echo "=== Installing provider via Helm ==="
+helm repo add scaleway https://helm.scw.cloud/
+helm repo update
 helm upgrade --install scaleway-secrets-store-csi --namespace kube-system scaleway/scaleway-secrets-store-csi \
   --set pod.image.repository="$DOCKER_IMAGE" \
   --set pod.image.tag="$BUILD_VERSION" \
@@ -36,6 +38,6 @@ helm upgrade --install scaleway-secrets-store-csi --namespace kube-system scalew
   --set provider.debug=true
 
 echo "=== Provider pods ==="
-kubectl get pods -n kube-system -l app.kubernetes.io/name=secrets-store-csi-driver-provider-scw
+kubectl get pods -n kube-system -l app.kubernetes.io/name=scaleway-secrets-store-csi
 
 echo "=== Deployment complete ==="

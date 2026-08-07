@@ -22,13 +22,14 @@ helm repo update
 helm upgrade --install scaleway-secrets-store-csi --namespace kube-system scaleway/scaleway-secrets-store-csi
 ```
 
-The values file is available here: [values.yaml](./charts/secrets-store-csi-driver-provider-scw/values.yaml).
+The values file is available here:
+[values.yaml](https://github.com/scaleway/helm-charts/blob/master/charts/scaleway-secrets-store-csi/values.yaml).
 
 ### Using kubectl
 
 You can also install using the deployment config in the `deployment` folder:
 ```bash
-kubectl apply -f deployment/secrets-store-csi-driver-provider-scw.yaml
+kubectl apply -n kube-system -f deployment/secrets-store-csi-driver-provider-scw.yaml
 ```
 
 ## Usage
@@ -143,11 +144,12 @@ spec:
 
 ### Checking Logs
 
-To troubleshoot issues with the Scaleway CSI provider, look at logs from the CSI provider pod running on the same node as your application pod:
+To troubleshoot issues with the Scaleway CSI provider, look at logs from the CSI provider pod
+running on the same node as your application pod:
 ```bash
-kubectl get pods -o wide
+kubectl get pods -n kube-system -o wide
 # Find the Scaleway CSI provider pod running on the same node as your application pod
-kubectl logs secrets-store-csi-driver-provider-scw-xxxxx
+kubectl logs -n kube-system scaleway-secrets-store-csi-xxxxx
 ```
 
 ### Enabling Debug Mode
@@ -175,4 +177,14 @@ kubectl get pods -o wide
 
 ## Contribute
 
-If you are looking for a way to contribute please read the [contributing guide](./CONTRIBUTING.md).
+If you are looking for a way to contribute please read the [contributing guide](./CONTRIBUTING.md).
+
+### Code of conduct
+
+Participation in the Kubernetes community is governed by the
+[CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
+
+## Reach us
+
+We love feedback. Feel free to reach us on [Scaleway Slack community](https://slack.scaleway.com),
+we are waiting for you on #secret-manager.
