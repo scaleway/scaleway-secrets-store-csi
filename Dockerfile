@@ -1,5 +1,5 @@
 #################### BUILDER ###############################
-FROM --platform=$BUILDPLATFORM golang:1.26-alpine3.24 AS builder
+FROM --platform=$BUILDPLATFORM golang:1.27-alpine3.24 AS builder
 
 WORKDIR /build
 
