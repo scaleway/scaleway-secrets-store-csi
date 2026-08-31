@@ -5,7 +5,7 @@ go 1.26.3
 tool go.uber.org/mock/mockgen
 
 require (
-	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.3
+	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.4
 	github.com/scaleway/scaleway-sdk-go v1.0.0-beta.37
 	github.com/stretchr/testify v1.12.1
 	go.uber.org/mock v0.6.0
